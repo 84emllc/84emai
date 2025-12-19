@@ -1,0 +1,25 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+
+<link rel="icon" href="{{ "/favicon.ico" | relURL }}" sizes="32x32">
+<link rel="icon" href="{{ "/icon-192.png" | relURL }}" type="image/png" sizes="192x192">
+<link rel="apple-touch-icon" href="{{ "/apple-touch-icon.png" | relURL }}">
+
+{{- $title := site.Title -}}
+{{- if .IsHome -}}
+  {{- $title = printf "%s - %s" site.Title site.Params.description -}}
+{{- else -}}
+  {{- $title = printf "%s - %s" .Title site.Title -}}
+{{- end -}}
+<title>{{ $title }}</title>
+
+{{- partial "meta.html" . -}}
+
+{{- $css := resources.Get "css/main.css" | minify | fingerprint -}}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}">
+
+<link rel="canonical" href="{{ .Permalink }}">
+<link rel="alternate" type="application/rss+xml" title="{{ site.Title }}" href="{{ "index.xml" | absURL }}">
+
+{{- partial "structured-data.html" . -}}

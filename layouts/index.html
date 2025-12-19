@@ -1,0 +1,31 @@
+{{ define "main" }}
+<article class="home">
+  <section class="intro">
+    <h1>{{ site.Title }}</h1>
+    <p>{{ site.Params.description }}</p>
+  </section>
+
+  <section class="recent-posts">
+    <h2>Recent Posts</h2>
+    {{- $posts := where site.RegularPages "Section" "posts" -}}
+    {{- if $posts -}}
+    <ul class="post-list">
+      {{- range first 5 $posts -}}
+      <li class="post-item">
+        <article>
+          <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+          <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+          {{- with .Params.description }}
+          <p>{{ . }}</p>
+          {{- end }}
+        </article>
+      </li>
+      {{- end -}}
+    </ul>
+    <p><a href="{{ "/posts/" | relURL }}">View all posts &rarr;</a></p>
+    {{- else -}}
+    <p>No posts yet.</p>
+    {{- end -}}
+  </section>
+</article>
+{{ end }}

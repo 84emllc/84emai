@@ -1,0 +1,42 @@
+{{ define "main" }}
+<article class="single-post">
+  <header class="post-header">
+    <h1>{{ .Title }}</h1>
+    {{- if .Date.IsZero | not }}
+    {{- if eq .Section "posts" }}
+    <div class="post-meta">
+      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+      {{- with .Params.tags }}
+      <span class="post-tags">
+        {{- range . }}
+        <a href="{{ "/tags/" | relURL }}{{ . | urlize }}/" rel="tag">{{ . }}</a>
+        {{- end }}
+      </span>
+      {{- end }}
+    </div>
+    {{- end }}
+    {{- end }}
+  </header>
+
+  <div class="post-content">
+    {{ .Content }}
+  </div>
+
+  {{- if eq .Section "posts" }}
+  <footer class="post-footer">
+    {{- $prev := .PrevInSection -}}
+    {{- $next := .NextInSection -}}
+    {{- if or $prev $next -}}
+    <nav class="post-nav" aria-label="Post navigation">
+      {{- with $prev }}
+      <a href="{{ .RelPermalink }}" class="prev">&larr; {{ .Title }}</a>
+      {{- end }}
+      {{- with $next }}
+      <a href="{{ .RelPermalink }}" class="next">{{ .Title }} &rarr;</a>
+      {{- end }}
+    </nav>
+    {{- end -}}
+  </footer>
+  {{- end }}
+</article>
+{{ end }}
