@@ -47,8 +47,8 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --color-bg: #0d1117;
-    --color-text: #e6edf3;
-    --color-text-muted: #8b949e;
+    --color-text: #fff;
+    --color-text-muted: #fff;
     --color-primary: #58a6ff;
     --color-primary-dark: #79b8ff;
     --color-border: #30363d;
@@ -213,7 +213,7 @@ main {
   background: #000;
   text-align: center;
   padding: var(--spacing);
-  color: #999;
+  color: #fff;
   font-size: 0.875rem;
 }
 
@@ -223,7 +223,7 @@ main {
 }
 
 .site-footer a {
-  color: #999;
+  color: #fff;
   /* WCAG 2.5.8 Target Size */
   display: inline-block;
   padding: 0.25rem 0;
