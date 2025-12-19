@@ -18,6 +18,5 @@ I'm documenting what works for me. Some of it might work for you too.
 ## Get in touch
 
 Find me on the web:
-- [84EM](https://84em.com) - WordPress development and consulting
-- [GitHub](https://github.com/84em)
-- [LinkedIn](https://www.linkedin.com/in/andrew84em/)
+
+{{< contact-links >}}
