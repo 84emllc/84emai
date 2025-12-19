@@ -9,20 +9,20 @@
     <h2>Recent Posts</h2>
     {{- $posts := where site.RegularPages "Section" "posts" -}}
     {{- if $posts -}}
-    <ul class="post-list">
-      {{- range first 5 $posts -}}
-      <li class="post-item">
-        <article>
-          <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-          <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+    <ul class="post-list-compact">
+      {{- range first 10 $posts -}}
+      <li>
+        <div class="post-info">
+          <a href="{{ .RelPermalink }}">{{ .Title }}</a>
           {{- with .Params.description }}
           <p>{{ . }}</p>
           {{- end }}
-        </article>
+        </div>
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 Jan 2006" }}</time>
       </li>
       {{- end -}}
     </ul>
-    <p><a href="{{ "/posts/" | relURL }}">View all posts &rarr;</a></p>
+    <a href="{{ "/posts/" | relURL }}" class="see-all">See all posts</a>
     {{- else -}}
     <p>No posts yet.</p>
     {{- end -}}
