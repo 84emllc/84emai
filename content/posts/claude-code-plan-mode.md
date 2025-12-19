@@ -1,7 +1,7 @@
 ---
 title: "Claude Code Plan Mode: From Idea to MVP in 7 Minutes"
 slug: "claude-code-plan-mode"
-date: 2025-12-19
+date: 2025-12-18
 description: "How I used Claude Code's Plan Mode to expand a legacy script with edit and delete functionality"
 tags: ["claude-code", "ai", "workflow"]
 ---

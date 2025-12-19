@@ -1,6 +1,6 @@
 ---
 title: "Hello World"
-date: 2025-12-18
+date: 2025-12-17
 description: "First post on 84EM.AI - what this site is about"
 tags: ["meta"]
 ---
