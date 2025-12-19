@@ -1,6 +1,7 @@
 ---
 title: "About"
 description: "About 84EM.AI and Andrew Miller"
+date: 2025-12-17
 ---
 
 ![Andrew Miller](/images/headshot-150.avif)
