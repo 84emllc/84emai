@@ -404,12 +404,6 @@ main {
 
 .post-item h2 a,
 .post-item h3 a {
-  text-decoration: none;
-  color: var(--color-text);
-}
-
-.post-item h2 a:hover,
-.post-item h3 a:hover {
   color: var(--color-primary);
 }
 
