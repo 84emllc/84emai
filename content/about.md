@@ -3,6 +3,8 @@ title: "About"
 description: "About 84EM.AI and Andrew Miller"
 ---
 
+![Andrew Miller](/images/headshot-150.avif)
+
 I'm Andrew Miller, a WordPress developer and consultant who runs [84EM](https://84em.com).
 
 This site is where I share what I'm learning about AI: workflows that actually work, tools worth using, and practical applications I've found useful in my day-to-day work.
