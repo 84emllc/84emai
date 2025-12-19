@@ -6,7 +6,6 @@
   </section>
 
   <section class="recent-posts">
-    <h2>Recent Posts</h2>
     {{- $posts := where site.RegularPages "Section" "posts" -}}
     {{- if $posts -}}
     <ul class="post-list-compact">
