@@ -24,6 +24,8 @@
 
   {{ partial "share.html" . }}
 
+  {{ partial "related.html" . }}
+
   {{- if eq .Section "posts" }}
   <footer class="post-footer">
     {{- $prev := .PrevInSection -}}
