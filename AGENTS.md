@@ -82,7 +82,7 @@ hugo new content posts/my-post-slug.md
 ```yaml
 ---
 title: "Your Post Title"
-date: 2024-12-19
+date: 2025-12-19
 description: "Brief description for SEO and previews"
 tags: ["tag1", "tag2"]
 draft: false  # Set to false to publish
