@@ -44,9 +44,14 @@ hugo new content posts/my-post-slug.md
 │   ├── about.md            # About page
 │   └── posts/
 │       ├── _index.md       # Posts section config
-│       └── *.md            # Blog posts
+│       ├── hello-world.md  # Simple post (no images)
+│       └── my-post/        # Page bundle (with images)
+│           ├── index.md    # Post content
+│           └── image.jpg   # Co-located images
 ├── layouts/
 │   ├── _default/
+│   │   ├── _markup/
+│   │   │   └── render-image.html  # Responsive image processing
 │   │   ├── baseof.html     # Base template
 │   │   ├── list.html       # Section/taxonomy lists
 │   │   └── single.html     # Individual pages/posts
@@ -76,21 +81,43 @@ hugo new content posts/my-post-slug.md
 
 ## Creating New Posts
 
-1. Run: `hugo new content posts/your-post-slug.md`
-2. Edit frontmatter:
+Posts with images **must** use page bundles for responsive image generation.
+
+### Post with images (page bundle)
+
+1. Create folder: `content/posts/your-post-slug/`
+2. Create `index.md` inside with frontmatter:
 
 ```yaml
 ---
 title: "Your Post Title"
+slug: "your-post-slug"
 date: 2025-12-19
 description: "Brief description for SEO and previews"
 tags: ["tag1", "tag2"]
-draft: false  # Set to false to publish
 ---
 ```
 
-3. Write content in Markdown
-4. Build: `hugo`
+3. Place images in the same folder (not in `/static/images/`)
+4. Reference images with relative paths:
+
+```markdown
+![Alt text](my-image.jpg)
+```
+
+The render hook automatically generates:
+- Responsive srcset (400w, 800w, 1200w)
+- WebP conversion
+- width/height attributes
+- lazy loading
+
+### Post without images
+
+```bash
+hugo new content posts/your-post-slug.md
+```
+
+Edit frontmatter and write content in Markdown.
 
 ## Design System
 

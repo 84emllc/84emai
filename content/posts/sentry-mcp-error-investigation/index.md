@@ -8,7 +8,7 @@ tags: ["claude-code", "mcp", "sentry", "workflow"]
 
 I use [Sentry](https://sentry.io) to monitor site errors on 84em.com. When something breaks, I get a Slack notification and can dig into the stack trace, affected URLs, and error frequency.
 
-![Sentry error dashboard](/images/sentry-error-dashboard.png)
+![Sentry error dashboard](sentry-error-dashboard.png)
 
 This works fine, but it means context switching: leave what I'm doing, open the dashboard, click through the issue, read the stack trace, figure out what's happening.
 

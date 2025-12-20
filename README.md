@@ -14,6 +14,27 @@ hugo server -D
 hugo
 ```
 
+## Creating Posts
+
+Posts with images use page bundles for automatic responsive image generation:
+
+```
+content/posts/my-post/
+├── index.md      # Post content
+├── image1.jpg    # Images in same folder
+└── image2.png
+```
+
+Reference images with relative paths:
+
+```markdown
+![Alt text](image1.jpg)
+```
+
+Hugo automatically generates srcset with multiple sizes, converts to WebP, and adds width/height.
+
+See `AGENTS.md` for full documentation.
+
 ## About
 
 Built with Hugo. No JavaScript, no frameworks, no external dependencies. System fonts, single CSS file, WCAG 2.2 AA accessible.
