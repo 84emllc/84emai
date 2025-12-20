@@ -5,6 +5,23 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.2.0] - 2025-12-20
+
+### Added
+
+- Reading time display on posts (100 wpm for technical content)
+- CI workflows documentation in AGENTS.md
+- Versioning policy documentation in AGENTS.md
+- Features documentation (reading time, analytics) in AGENTS.md
+- `?notrack` query parameter to disable Simple Analytics
+- GitHub Actions for Lighthouse CI and link checking
+- PR comments with Lighthouse scores and link check results
+
+### Changed
+
+- CI workflows only run on PRs when `run-ci` label is added
+- CI workflows use path filters to skip irrelevant changes
+
 ## [1.1.0] - 2025-12-20
 
 ### Added
@@ -22,7 +39,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Hugo static site with blog functionality
-- Blog posts: Claude Code Plan Mode, Sentry MCP error investigation, MVP to Production with Claude Code
 - About page with headshot and contact links
 - Privacy policy page
 - Social share buttons with copy URL functionality
