@@ -43,4 +43,4 @@ By [Andrew Miller](https://84em.com).
 
 ## License
 
-Content and code copyright Andrew Miller. All rights reserved.
+MIT License. See [LICENSE](LICENSE) for details.

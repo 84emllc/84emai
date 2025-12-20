@@ -5,6 +5,18 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.0] - 2025-12-20
+
+### Added
+
+- H2 and H3 heading hierarchy on homepage for accessibility and SEO
+- ItemList structured data for blog posts on homepage
+- MIT license
+
+### Changed
+
+- License from all rights reserved to MIT
+
 ## [1.0.0] - 2025-12-20
 
 ### Added
