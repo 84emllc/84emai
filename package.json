@@ -6,6 +6,9 @@
     "build": "hugo",
     "dev": "hugo server -D"
   },
+  "hugo-bin": {
+    "buildTags": "extended"
+  },
   "devDependencies": {
     "hugo-bin": "^0.135.0"
   }
