@@ -3,8 +3,24 @@ name: Check Links
 on:
   push:
     branches: [main]
+    paths:
+      - 'content/**'
+      - 'layouts/**'
+      - 'assets/**'
+      - 'static/**'
+      - 'hugo.toml'
+      - 'archetypes/**'
+      - '.github/workflows/links.yml'
   pull_request:
     branches: [main]
+    paths:
+      - 'content/**'
+      - 'layouts/**'
+      - 'assets/**'
+      - 'static/**'
+      - 'hugo.toml'
+      - 'archetypes/**'
+      - '.github/workflows/links.yml'
 
 jobs:
   check-links:
