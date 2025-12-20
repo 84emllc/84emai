@@ -173,6 +173,16 @@ Automatic via `prefers-color-scheme`. Primary shifts to `#58a6ff` for contrast.
 - **Branch:** main
 - **Ignored:** `/public/`, `/resources/_gen/`, editor files
 
+## Git Workflow
+
+**NEVER commit directly to main.** Always create a branch first, then open a PR to merge.
+
+Branch naming:
+- `feature/` - New functionality
+- `fix/` - Bug fixes and corrections
+- `release/` - Version releases
+- `hotfix/` - Urgent production fixes
+
 ## Configuration Reference
 
 Key settings in `hugo.toml`:
