@@ -27,7 +27,7 @@ jobs:
           args: >-
             --verbose
             --no-progress
-            --accept 429,500,502,503,999
+            --offline
             --exclude 'fonts.gstatic.com'
             './public/**/*.html'
           fail: true
