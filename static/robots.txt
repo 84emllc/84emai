@@ -8,8 +8,8 @@ Disallow: /404.html
 # Sitemap
 Sitemap: https://84em.ai/sitemap.xml
 
-# LLMs
-LLMs: https://84em.ai/llms.txt
+# LLMs.txt (for AI systems)
+# See: https://84em.ai/llms.txt
 
 # AI Crawlers - Welcome
 # This site is intended to be indexed and used by AI systems

@@ -1,7 +1,7 @@
 <header class="site-header">
   <nav class="site-nav" aria-label="Main navigation">
     <a href="{{ "/" | relURL }}" class="site-logo" aria-label="{{ site.Title }} home">
-      <img src="{{ "/images/logo.webp" | relURL }}" alt="{{ site.Title }}" width="150" height="47">
+      <img src="{{ "/images/logo.webp" | relURL }}" alt="{{ site.Title }}" width="47" height="40">
     </a>
     <ul class="nav-links">
       <li><a href="{{ "/posts/" | relURL }}"{{ if eq .Section "posts" }} aria-current="page"{{ end }}>Posts</a></li>
