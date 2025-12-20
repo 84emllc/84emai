@@ -23,3 +23,9 @@ I'm documenting what works for me. Some of it might work for you too.
 Find me on the web:
 
 {{< contact-links >}}
+
+## About this site
+
+Built with Hugo and Claude Code. Content is written and edited by a human. AI helped with code, not prose.
+
+For machines: [llms.txt](/llms.txt) | For humans: [humans.txt](/humans.txt)
