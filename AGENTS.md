@@ -35,6 +35,10 @@ hugo new content posts/my-post-slug.md
 
 ```
 84em.ai/
+├── .github/
+│   └── workflows/
+│       ├── lighthouse.yml  # Lighthouse CI (performance, a11y, SEO)
+│       └── links.yml       # Internal link validation
 ├── archetypes/
 │   └── default.md          # Frontmatter template for new content
 ├── assets/
@@ -134,6 +138,16 @@ Edit frontmatter and write content in Markdown.
 ### Dark Mode
 Automatic via `prefers-color-scheme`. Primary shifts to `#58a6ff` for contrast.
 
+## Features
+
+### Reading Time
+Posts display estimated reading time based on 100 words per minute. This rate is intentionally slower than the typical 200-250 wpm to account for technical content that requires more careful reading.
+
+### Analytics
+Site uses [Simple Analytics](https://simpleanalytics.com) for privacy-friendly tracking.
+
+**Disable tracking:** Append `?notrack` to any URL to disable analytics for that page view. Useful for testing or personal browsing.
+
 ## Accessibility (WCAG 2.2 AA)
 
 - Skip link to main content
@@ -182,6 +196,38 @@ Branch naming:
 - `fix/` - Bug fixes and corrections
 - `release/` - Version releases
 - `hotfix/` - Urgent production fixes
+
+## Versioning Policy
+
+This project follows [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+**What triggers a version bump:**
+- New site features (reading time, share buttons, etc.)
+- Infrastructure changes (CI workflows, build config)
+- Breaking changes to templates or structure
+
+**What does NOT trigger a version bump:**
+- New blog posts (content updates)
+- Typo fixes in content
+- Minor copy edits
+
+New posts are content, not releases. The changelog tracks site functionality, not content additions.
+
+## CI Workflows
+
+CI workflows run automatically on pushes to `main` (with path filters). For pull requests, workflows only run when the `run-ci` label is added.
+
+### Triggering CI on PRs
+
+Add the `run-ci` label to a PR to trigger:
+- **Lighthouse CI** - Performance, accessibility, best practices, and SEO audits
+- **Link Check** - Validates all internal links are valid
+
+Results are posted as PR comments.
+
+### Why Label-Based Triggering?
+
+Saves CI minutes by not running expensive checks on every PR commit. Add the label when you're ready for a final review or before merging.
 
 ## Configuration Reference
 
