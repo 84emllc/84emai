@@ -19,7 +19,7 @@
     {{- end }}
   </header>
 
-  {{- if and (eq .Section "posts") (gt (len .TableOfContents) 100) }}
+  {{- if gt (len .TableOfContents) 100 }}
   <details class="toc">
     <summary>Table of Contents</summary>
     {{ .TableOfContents }}
