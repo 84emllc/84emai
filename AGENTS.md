@@ -75,8 +75,7 @@ hugo new content posts/my-post-slug.md
 │   └── llms.txt            # LLM-specific site description
 ├── hugo.toml               # Site configuration
 ├── AGENTS.md               # This file
-├── CLAUDE.md               # Pointer to AGENTS.md
-└── PROMPT.md               # Original build requirements
+└── CLAUDE.md               # Pointer to AGENTS.md
 ```
 
 ## Creating New Posts
