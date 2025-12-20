@@ -23,7 +23,8 @@ jobs:
           if [ "${{ github.event_name }}" == "push" ]; then
             echo "base_url=https://84em.ai" >> $GITHUB_OUTPUT
           else
-            echo "base_url=https://emai-yxxth.kinsta.page" >> $GITHUB_OUTPUT
+            BRANCH_SLUG=$(echo "${{ github.head_ref }}" | sed 's/\//-/g')
+            echo "base_url=https://emai-yxxth-branch-${BRANCH_SLUG}.kinsta.page" >> $GITHUB_OUTPUT
           fi
 
       - name: Lighthouse CI
