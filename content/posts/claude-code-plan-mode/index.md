@@ -18,7 +18,7 @@ I wanted to expand the functionality so I could edit and delete monitors too, so
 
 ## The process
 
-![Claude Code Plan Mode interface](/images/claude-code-plan-mode.jpg)
+![Claude Code Plan Mode interface](claude-code-plan-mode.jpg)
 
 Plan Mode does the research for you. It fetched the UptimeRobot API documentation, searched for the specific endpoints I needed, and wrote a 93-line plan covering:
 
@@ -31,7 +31,7 @@ I could review the plan, answer a few clarifying questions, and then let Claude 
 
 ## The result
 
-![Uptime Robot Monitors UI with edit and delete buttons](/images/uptimerobot-monitors-ui.jpg)
+![Uptime Robot Monitors UI with edit and delete buttons](uptimerobot-monitors-ui.jpg)
 
 It took 2 minutes to develop the plan and 5 minutes to create the MVP which lets me pause and delete monitors. Now I can move on to additional features, such as changing notification contacts and check intervals.
 
@@ -41,6 +41,6 @@ Planning before coding isn't new. But having an AI that can research APIs, consi
 
 And speaking of planning, here's Lenny forming a plan of attack on Gilda.
 
-![Lenny the cat and Gilda the dog](/images/lenny-gilda-planning.jpg)
+![Lenny the cat and Gilda the dog](lenny-gilda-planning.jpg)
 
 Kidding. They're actually best buds.

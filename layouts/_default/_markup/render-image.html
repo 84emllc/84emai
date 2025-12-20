@@ -1,0 +1,36 @@
+{{- $src := .Destination -}}
+{{- $alt := .Text -}}
+{{- $img := .Page.Resources.GetMatch $src -}}
+
+{{- if $img -}}
+  {{- $sizes := slice 400 800 1200 -}}
+  {{- $srcset := slice -}}
+  {{- $fallback := $img -}}
+
+  {{- range $sizes -}}
+    {{- if ge $img.Width . -}}
+      {{- $resized := $img.Resize (printf "%dx webp q85" .) -}}
+      {{- $srcset = $srcset | append (printf "%s %dw" $resized.RelPermalink .) -}}
+      {{- if eq . 800 -}}
+        {{- $fallback = $resized -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- if not $srcset -}}
+    {{- $fallback = $img.Resize (printf "%dx webp q85" $img.Width) -}}
+    {{- $srcset = $srcset | append (printf "%s %dw" $fallback.RelPermalink $img.Width) -}}
+  {{- end -}}
+
+<img
+  src="{{ $fallback.RelPermalink }}"
+  srcset="{{ delimit $srcset ", " }}"
+  sizes="(max-width: 768px) 100vw, 768px"
+  width="{{ $fallback.Width }}"
+  height="{{ $fallback.Height }}"
+  alt="{{ $alt }}"
+  loading="lazy"
+  decoding="async">
+{{- else -}}
+<img src="{{ $src }}" alt="{{ $alt }}" loading="lazy" decoding="async">
+{{- end -}}
