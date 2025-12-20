@@ -38,5 +38,3 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Hugo Extended enabled for image processing
 - Kinsta hosting configuration
 - hugo-bin for local development builds
-
-[1.0.0]: https://github.com/84em/84em.ai/releases/tag/v1.0.0
