@@ -7,6 +7,8 @@
     {{- if eq .Section "posts" }}
     <div class="post-meta">
       <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
+      {{- $readTime := div .WordCount 100 }}{{ if lt $readTime 1 }}{{ $readTime = 1 }}{{ end }}
+      <span class="reading-time">{{ $readTime }} min read</span>
       {{- with .Params.tags }}
       <span class="post-tags">
         {{- range . }}

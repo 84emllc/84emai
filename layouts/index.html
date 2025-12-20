@@ -18,7 +18,11 @@
           <p>{{ . }}</p>
           {{- end }}
         </div>
-        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 Jan 2006" }}</time>
+        <div class="post-date">
+          <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 Jan 2006" }}</time>
+          {{- $readTime := div .WordCount 100 }}{{ if lt $readTime 1 }}{{ $readTime = 1 }}{{ end }}
+          <span class="reading-time">{{ $readTime }} min read</span>
+        </div>
       </li>
       {{- end -}}
     </ul>
