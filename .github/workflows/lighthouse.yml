@@ -3,8 +3,26 @@ name: Lighthouse CI
 on:
   push:
     branches: [main]
+    paths:
+      - 'content/**'
+      - 'layouts/**'
+      - 'assets/**'
+      - 'static/**'
+      - 'hugo.toml'
+      - 'archetypes/**'
+      - '.github/workflows/lighthouse.yml'
+      - 'lighthouserc.json'
   pull_request:
     branches: [main]
+    paths:
+      - 'content/**'
+      - 'layouts/**'
+      - 'assets/**'
+      - 'static/**'
+      - 'hugo.toml'
+      - 'archetypes/**'
+      - '.github/workflows/lighthouse.yml'
+      - 'lighthouserc.json'
 
 jobs:
   lighthouse:
