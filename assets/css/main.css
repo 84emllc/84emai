@@ -380,6 +380,17 @@ main {
   min-height: 44px;
 }
 
+.recent-posts h2 {
+  font-size: 1.25rem;
+  margin: 0 0 1rem;
+}
+
+.post-list-compact .post-info h3 {
+  font-size: 1rem;
+  font-weight: normal;
+  margin: 0;
+}
+
 @media (max-width: 480px) {
   .post-list-compact li {
     flex-direction: column;

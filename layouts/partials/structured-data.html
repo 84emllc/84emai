@@ -12,6 +12,27 @@
   }
 }
 </script>
+{{- $posts := where site.RegularPages "Section" "posts" -}}
+{{- if $posts -}}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Latest Posts",
+  "itemListElement": [
+    {{- range $index, $post := first 10 $posts -}}
+    {{- if $index }},{{ end }}
+    {
+      "@type": "ListItem",
+      "position": {{ add $index 1 }},
+      "url": "{{ $post.Permalink }}",
+      "name": "{{ $post.Title }}"
+    }
+    {{- end }}
+  ]
+}
+</script>
+{{- end -}}
 {{- else if .IsPage -}}
 <script type="application/ld+json">
 {
