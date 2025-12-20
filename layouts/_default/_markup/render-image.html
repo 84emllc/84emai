@@ -5,32 +5,32 @@
 {{- if $img -}}
   {{- $sizes := slice 400 800 1200 -}}
   {{- $srcset := slice -}}
-  {{- $fallback := $img -}}
+  {{- $largest := $img -}}
+  {{- $maxWidth := $img.Width -}}
 
   {{- range $sizes -}}
     {{- if ge $img.Width . -}}
       {{- $resized := $img.Resize (printf "%dx webp q85" .) -}}
       {{- $srcset = $srcset | append (printf "%s %dw" $resized.RelPermalink .) -}}
-      {{- if eq . 800 -}}
-        {{- $fallback = $resized -}}
-      {{- end -}}
+      {{- $largest = $resized -}}
     {{- end -}}
   {{- end -}}
 
   {{- if not $srcset -}}
-    {{- $fallback = $img.Resize (printf "%dx webp q85" $img.Width) -}}
-    {{- $srcset = $srcset | append (printf "%s %dw" $fallback.RelPermalink $img.Width) -}}
+    {{- $largest = $img.Resize (printf "%dx webp q85" $img.Width) -}}
+    {{- $srcset = $srcset | append (printf "%s %dw" $largest.RelPermalink $img.Width) -}}
   {{- end -}}
 
 <img
-  src="{{ $fallback.RelPermalink }}"
+  src="{{ $largest.RelPermalink }}"
   srcset="{{ delimit $srcset ", " }}"
-  sizes="(max-width: 768px) 100vw, 768px"
-  width="{{ $fallback.Width }}"
-  height="{{ $fallback.Height }}"
+  sizes="(max-width: {{ $maxWidth }}px) 100vw, {{ $maxWidth }}px"
+  width="{{ $largest.Width }}"
+  height="{{ $largest.Height }}"
   alt="{{ $alt }}"
   loading="lazy"
-  decoding="async">
+  decoding="async"
+  style="max-width: {{ $maxWidth }}px;">
 {{- else -}}
 <img src="{{ $src }}" alt="{{ $alt }}" loading="lazy" decoding="async">
 {{- end -}}
