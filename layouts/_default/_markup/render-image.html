@@ -32,5 +32,11 @@
   decoding="async"
   style="max-width: {{ $maxWidth }}px;">
 {{- else -}}
+  {{- $staticImg := resources.GetMatch $src -}}
+  {{- if $staticImg -}}
+    {{- $processed := $staticImg.Process "webp" -}}
+<img src="{{ $processed.RelPermalink }}" width="{{ $processed.Width }}" height="{{ $processed.Height }}" alt="{{ $alt }}" loading="lazy" decoding="async">
+  {{- else -}}
 <img src="{{ $src }}" alt="{{ $alt }}" loading="lazy" decoding="async">
+  {{- end -}}
 {{- end -}}

@@ -4,7 +4,7 @@ description: "About 84EM.AI and Andrew Miller"
 date: 2025-12-17
 ---
 
-![Andrew Miller](/images/headshot-150.avif)
+![Andrew Miller](images/headshot-150.webp)
 
 I'm Andrew Miller, a WordPress developer and consultant who runs [84EM](https://84em.com).
 
