@@ -16,21 +16,21 @@ The beauty of AI-assisted development is how fast you can iterate. Each feature 
 
 Here's what got added:
 
-## Session management
+## Authentication
 
-The UptimeRobot API uses session tokens that expire. Rather than deal with random failures, I asked Claude to add session handling.
+The tool needs to protect access to the UptimeRobot API key. Rather than hardcode credentials or leave it open, I asked Claude to add proper authentication.
 
 ![Session expiring modal](session-expiring.png)
 
-Now the tool tracks session expiry and prompts before timeout. Extend with one click or logout cleanly. No more mid-task authentication errors.
+The tool now has its own session management with expiry warnings. Extend with one click or logout cleanly. No more leaving authenticated sessions open indefinitely.
 
 ## Two-factor authentication
 
-My UptimeRobot account uses 2FA. The original script couldn't handle that. One prompt later:
+A password alone wasn't enough security for a tool managing 200+ monitors. One prompt later:
 
 ![Two-factor verification screen](verification.png)
 
-The tool now supports the full authentication flow, including code expiry countdown and resend functionality.
+Added custom 2FA using TOTP codes, complete with expiry countdown and resend functionality.
 
 ## Progress feedback
 
