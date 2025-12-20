@@ -645,9 +645,33 @@ main {
   transition: background-color 0.15s ease, color 0.15s ease;
 }
 
-.share-buttons a:hover {
+.share-buttons a:hover,
+.share-buttons .copy-url-btn:hover {
   background: var(--color-primary);
   color: #fff;
+}
+
+.share-buttons .copy-url-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 0.625rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  color: var(--color-text-muted);
+  background: var(--color-code-bg);
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.share-buttons .copy-success {
+  font-size: 0.875rem;
+  color: var(--color-accent-green);
+  font-weight: 500;
 }
 
 .share-buttons svg {
