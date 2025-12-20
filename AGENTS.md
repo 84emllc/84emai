@@ -14,8 +14,8 @@ Project documentation for LLM agents working on this repository.
 
 - **Static Site Generator:** Hugo (no theme, custom templates)
 - **CSS:** Single hand-written file, processed via Hugo Pipes
-- **JavaScript:** None
-- **Fonts:** System font stack (no web fonts)
+- **JavaScript:** Minimal
+- **Fonts:** Inter (self-hosted), system stack fallback
 - **Hosting:** Static files (deploy `public/` directory)
 
 ## Commands

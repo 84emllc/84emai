@@ -8,8 +8,8 @@ Location: United States
 /* SITE */
 Built with: Hugo
 Styled with: Hand-written CSS
-Fonts: System stack
-JavaScript: None
+Fonts: Inter (self-hosted)
+JavaScript: Minimal
 Analytics: Simple Analytics (privacy-focused)
 Hosting: Kinsta
 
