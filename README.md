@@ -37,7 +37,7 @@ See `AGENTS.md` for full documentation.
 
 ## About
 
-Built with Hugo. Minimal JavaScript, no frameworks, no external dependencies. System fonts, single CSS file, WCAG 2.2 AA accessible.
+Built with Hugo. Minimal JavaScript, no frameworks. Self-hosted Inter font, single CSS file, WCAG 2.2 AA accessible.
 
 By [Andrew Miller](https://84em.com).
 
