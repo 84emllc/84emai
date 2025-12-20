@@ -26,6 +26,6 @@ Find me on the web:
 
 ## About this site
 
-Built with Hugo and Claude Code. Content is written and edited by a human. AI helped with code, not prose.
+Built with Hugo and Claude Code. Hosted by Kinsta. Content is written and edited by a human. AI helped with code, not prose.
 
 For machines: [llms.txt](/llms.txt) | For humans: [humans.txt](/humans.txt)
