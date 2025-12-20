@@ -47,21 +47,35 @@ jobs:
             const results = ${{ steps.lighthouse.outputs.manifest }};
             const links = ${{ steps.lighthouse.outputs.links }};
 
+            // Group results by URL and calculate median
+            const byUrl = {};
+            for (const result of results) {
+              const url = new URL(result.url).pathname || '/';
+              if (!byUrl[url]) byUrl[url] = [];
+              byUrl[url].push(result.summary);
+            }
+
+            const median = arr => {
+              const sorted = [...arr].sort((a, b) => a - b);
+              const mid = Math.floor(sorted.length / 2);
+              return sorted.length % 2 ? sorted[mid] : (sorted[mid - 1] + sorted[mid]) / 2;
+            };
+
             let comment = '## Lighthouse Results\n\n';
             comment += 'Tested against: `${{ steps.urls.outputs.base_url }}`\n\n';
             comment += '| Page | Performance | Accessibility | Best Practices | SEO |\n';
             comment += '|------|-------------|---------------|----------------|-----|\n';
 
-            for (const result of results) {
-              const url = new URL(result.url).pathname || '/';
-              const perf = Math.round(result.summary.performance * 100);
-              const a11y = Math.round(result.summary.accessibility * 100);
-              const bp = Math.round(result.summary['best-practices'] * 100);
-              const seo = Math.round(result.summary.seo * 100);
+            for (const [url, runs] of Object.entries(byUrl)) {
+              const perf = Math.round(median(runs.map(r => r.performance)) * 100);
+              const a11y = Math.round(median(runs.map(r => r.accessibility)) * 100);
+              const bp = Math.round(median(runs.map(r => r['best-practices'])) * 100);
+              const seo = Math.round(median(runs.map(r => r.seo)) * 100);
               comment += `| ${url} | ${perf} | ${a11y} | ${bp} | ${seo} |\n`;
             }
 
-            comment += '\n[View full reports](' + Object.values(links).join(') | [Report](') + ')';
+            const reportLinks = Object.values(links).slice(0, 3);
+            comment += '\n[View reports](' + reportLinks.join(') | [Report](') + ')';
 
             github.rest.issues.createComment({
               owner: context.repo.owner,
