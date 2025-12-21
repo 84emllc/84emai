@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Reading time display on posts (100 wpm for technical content)
+- 48x48 favicon for Google Search results (minimum required size)
 - CI workflows documentation in AGENTS.md
 - Versioning policy documentation in AGENTS.md
 - Features documentation (reading time, analytics) in AGENTS.md
