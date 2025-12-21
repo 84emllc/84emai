@@ -1,31 +1,31 @@
 ---
 title: "About"
-description: "About 84EM.AI and Andrew Miller"
+description: "AI workflows, tool reviews, and practical applications from a developer using these tools daily"
 date: 2025-12-17
 ---
 
 ![Andrew Miller](images/headshot-150.webp)
 
-I'm Andrew Miller, a WordPress developer and consultant who runs [84EM](https://84em.com).
+84EM.AI is where I document what I'm learning about AI tools.
 
-This site is where I share what I'm learning about AI: workflows that actually work, tools worth using, and practical applications I've found useful in my day-to-day work.
+Workflows that hold up in real projects. Tools worth the setup time. Practical applications that go beyond demos. No breathless predictions or dismissive skepticism.
 
-No hype, no breathless "this changes everything" predictions. Just notes from someone who's trying to use these tools effectively.
+## What you'll find here
 
-## Why this site
+AI coverage tends toward extremes. I'm more interested in what actually works day-to-day: Claude Code for development, automation pipelines, tool comparisons based on real usage.
 
-AI tools are moving fast. Most coverage falls into two camps: dismissive skepticism or uncritical enthusiasm. Neither is helpful when you're trying to figure out what to actually use.
+I write about what I use, not what's trending.
 
-I'm documenting what works for me. Some of it might work for you too.
+## Related
 
-## Get in touch
+For WordPress and web development, see [84EM.DEV](https://84em.dev). For consulting and client work, visit [84EM.com](https://84em.com).
 
-Find me on the web:
+## Connect
 
 {{< contact-links >}}
 
-## About this site
+## How it's built
 
-Built with Hugo and Claude Code. Hosted by Kinsta. Content is written and edited by a human. AI helped with code, not prose.
+Static site built with Hugo. No JavaScript frameworks. Single CSS file. Self-hosted Inter font. Accessibility-first design meeting WCAG 2.2 AA standards.
 
-For machines: [llms.txt](/llms.txt) | For humans: [humans.txt](/humans.txt)
+Source available on [GitHub](https://github.com/84emllc/84emai). For machines: [llms.txt](/llms.txt)
