@@ -74,7 +74,7 @@ hugo new content posts/my-post-slug.md
 │   ├── icon-192.png        # PWA icon
 │   ├── icon-512.png        # PWA icon large
 │   ├── apple-touch-icon.png # iOS icon
-│   ├── og-image.png        # Social share image (1200x630)
+│   ├── og-image.jpg        # Social share image (1200x630)
 │   ├── robots.txt          # Search engine + AI crawler directives
 │   └── llms.txt            # LLM-specific site description
 ├── hugo.toml               # Site configuration
