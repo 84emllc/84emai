@@ -27,6 +27,6 @@ For WordPress and web development, see [84EM.DEV](https://84em.dev). For consult
 
 ## How it's built
 
-Static site built with Hugo. No JavaScript frameworks. Single CSS file. Self-hosted Inter font. Accessibility-first design meeting WCAG 2.2 AA standards.
+Static site built with Hugo.
 
 Source available on [GitHub](https://github.com/84emllc/84emai). For machines: [llms.txt](/llms.txt)
