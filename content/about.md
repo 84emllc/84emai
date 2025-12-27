@@ -2,6 +2,7 @@
 title: "About"
 description: "AI workflows, tool reviews, and practical applications from a developer using these tools daily"
 date: 2025-12-17
+toc: false
 ---
 
 ![Andrew Miller](images/headshot-150.webp)
